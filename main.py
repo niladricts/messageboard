@@ -63,7 +63,7 @@ def create_message():
              print("Bad URL {0}".format(url))
              exit(0)
         created_data = insert_message(title,message,sender,url)
-        return "Message hass been sent!"
+        return "Message has been sent!"
     else:
           return render_template('create.html')
 
@@ -98,11 +98,11 @@ def list_message_xml():
 
         """
 
-    global msg
+    global msg1
     msg_root = e.Element("messageblock")
-    for m in range(len(msg)):
+    for m in range(len(msg1)):
         ms = e.SubElement(msg_root, "ms")
-        ms.text = str(msg[m])
+        ms.text = str(msg1[m])
 
     tree = e.ElementTree(msg_root)
 
