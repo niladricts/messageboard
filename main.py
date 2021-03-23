@@ -76,9 +76,11 @@ def list_message():
     """
 
     global msg
+    if msg:
 
-
-    return '%d messages: %s' % (len(msg),",\n".join(','.join(m) for m in msg))
+       return '%d messages: %s' % (len(msg),",\n".join(','.join(m) for m in msg))
+    else:
+          return "No messages available"
 
 @msgapp.route('/list/json',methods=['GET'])
 def list_message_json():
@@ -90,6 +92,8 @@ def list_message_json():
     global msg1
     if msg1:
        return json.dumps(msg1)
+    else:
+          return "No messages available"
 
 @msgapp.route('/list/xml',methods=['GET'])
 def list_message_xml():
