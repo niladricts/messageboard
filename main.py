@@ -59,10 +59,10 @@ def create_message():
     returns okay message after input validation and message sending
     """
     if request.method == 'POST':
-        title = request.form['title'].strip();
-        message = request.form['message'].strip();
-        sender = request.form['sender'].strip();
-        url = request.form['url'].strip();
+        title = request.form['title'].strip()
+        message = request.form['message'].strip()
+        sender = request.form['sender'].strip()
+        url = request.form['url'].strip()
         if validators.url(url):
             print("URL {0} is okay".format(url))
         else:
@@ -77,7 +77,7 @@ def create_message():
 @msgapp.route('/list', methods=['GET'])
 def list_message():
     """
-    This function will return the list of messages in normal text format. It will List all the fields
+    This function will return the list of messages in normal text format. It will List all the fields except url
 
     """
 
@@ -96,7 +96,7 @@ def list_message():
 @msgapp.route('/list/json', methods=['GET'])
 def list_message_json():
     """
-        This function will return the list of messages in json format. It will return all the fields except url
+        This function will return the list of messages in json format. It will return all the fields
 
         """
     msg_json = []
@@ -114,7 +114,7 @@ def list_message_json():
 @msgapp.route('/list/xml', methods=['GET'])
 def list_message_xml():
     """
-        This function will return the list of messages in xml format. It has two versions. It will return all the fields  except url
+        This function will return the list of messages in xml format. It has two versions. It will return all the fields
 
         """
     msg_list = []
