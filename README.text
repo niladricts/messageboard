@@ -1,0 +1,46 @@
+# messageboard is a small flask based python application to test message creation and display it. 
+
+Codebase Structure:
+
+ ls -lrt
+total 13
+drwxr-xr-x 1 bsens 197609    0 Mar 22 22:03 venv/
+-rw-r--r-- 1 bsens 197609  153 Mar 23 12:39 message.xml
+drwxr-xr-x 1 bsens 197609    0 Mar 23 13:55 templates/
+-rw-r--r-- 1 bsens 197609 3178 Mar 23 14:08 main.py
+
+venv => To launch virtual env. The changes will be temporal if you use this settings and only limited to the project scope that you are working. It is only available with PyCharm.
+
+templates => Templates directory to store all the html templates that are used in any flask based framework during UI execution or creation.
+
+main.py => Main file to start the server or application. 
+
+message.xml => XML file to store the result from /list/xml end point.
+
+Installation:
+
+1. Clone the repository  git@github.com:niladricts/messageboard.git
+2. Run python main.py
+3. It will first open the create message page as it is set as by default.
+
+Execution Steps:
+
+1. python main.py. It will open the default create.html at http://127.0.0.1:5000/
+2. Fill all the fields like title, message, sender, url
+3. If url field is okay, it will insert it and you will get a response message "Message has been sent!"
+4. If url is incorrect, it will exit the process.
+5. Once added, go to /list endpoint e.g. http://127.0.0.1:5000/list to view the added messages in normal text format. In this format url field will not visible.
+6. Now, if you hit endpoint /list/json/, it will give you the message in JSON format with url value.
+7. If you hit endpoint /list/xml/, it will give you the message in XMl format with url value.
+
+Limitations:
+
+1. No database added. Therefore, messages will be created and deleted once the server is up and down respectively.
+2. Showing XML data in webpage not possible. Hence, it is saved in the same local directory where the codebase is located with name messages.xml.
+
+Here's the XML format:
+
+<?xml version='1.0' encoding='utf-8'?>
+<messageblock><ms>messages(title='Phase5_TAU_Salaam_Namaste', message='Hi', sender='Niladri')</ms></messageblock>
+
+
