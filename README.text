@@ -29,14 +29,12 @@ Execution Steps:
 2. Fill all the fields like title, message, sender, url
 3. If url field is okay, it will insert it and you will get a response message "Message has been sent!"
 4. If url is incorrect, it will exit the process.
-5. Once added, go to /list endpoint e.g. http://127.0.0.1:5000/list to view the added messages in normal text format. In this format url field will not visible.
+5. Once added, go to /list endpoint e.g. http://127.0.0.1:5000/list to view the added messages in by default json format. In this format url field will not visible.
 6. Now, if you hit endpoint /list/json/, it will give you the message in JSON format with url value.
 7. If you hit endpoint /list/xml/, it will give you the message in XMl format with url value.
 
 Limitations:
-
-1. No database added. Therefore, messages will be created and deleted once the server is up and down respectively.
-2. Showing XML data in webpage not possible. Hence, it is saved in the same local directory where the codebase is located with name messages.xml.
+1. Showing XML data in webpage not possible at the moment. Hence, it is saved in the same local directory where the codebase is located with name messages.xml.
 
 Here's the XML format:
 
@@ -44,3 +42,5 @@ Here's the XML format:
 <messageblock><ms>messages(title='Phase5_TAU_Salaam_Namaste', message='Hi', sender='Niladri')</ms></messageblock>
 
 
+Special notes: MongoDB is used as backend database. Also without mongo, the implementation is there in the commit in the git.
+As an IDE, Pycharm is used.
