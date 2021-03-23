@@ -99,15 +99,21 @@ def list_message_xml():
         """
 
     global msg1
-    msg_root = e.Element("messageblock")
-    for m in range(len(msg1)):
-        ms = e.SubElement(msg_root, "ms")
-        ms.text = str(msg1[m])
+    try:
+        msg_root = e.Element("messageblock")
+        for m in range(len(msg1)):
+            ms = e.SubElement(msg_root, "ms")
+            ms.text = str(msg1[m])
 
-    tree = e.ElementTree(msg_root)
+        tree = e.ElementTree(msg_root)
+    except ValueError as e:
+           print("List has the following errors {e}".format(e))
 
     # write the tree into an XML file
-    tree.write("message.xml", encoding='utf-8', xml_declaration=True)
-    return "XML created in local"
+    try:
+        tree.write("message.xml", encoding='utf-8', xml_declaration=True)
+        return "XML created in local"
+    except Exception:
+           return "File creation error"
 if __name__ == "__main__":
     msgapp.run(debug=True)
