@@ -77,7 +77,7 @@ def create_message():
 @msgapp.route('/list', methods=['GET'])
 def list_message():
     """
-    This function will return the list of messages in normal text format. It will List all the fields except url
+    This function will return the list of messages in normal json format by default. It will List all the fields except url
 
     """
 
@@ -114,7 +114,7 @@ def list_message_json():
 @msgapp.route('/list/xml', methods=['GET'])
 def list_message_xml():
     """
-        This function will return the list of messages in xml format. It has two versions. It will return all the fields
+        This function will return the list of messages in xml format. It will return all the fields
 
         """
     msg_list = []
