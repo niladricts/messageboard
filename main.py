@@ -19,7 +19,6 @@ get_table = db.get_collection("message_table")
 if get_table is None:
     db.create_collection("message_table")
 
-
 msgapp = Flask(__name__, template_folder='templates')
 
 key = os.urandom(24)
