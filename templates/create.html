@@ -75,13 +75,13 @@ input[type=submit]:hover {
 <form action= '/create' method="post" >
     <h1>Welcome to Flask Message Board! Type your message here.</h1>
     <br>
-<label>Title &nbsp; &nbsp;<input type="text" name="title"></label>
+<label>Title &nbsp; &nbsp;<input type="text" name="title" maxlength="50"></label>
     <br>
-    <label>Message &nbsp; &nbsp;<input type="text" name="message"></label>
+    <label>Message &nbsp; &nbsp;<input type="text" name="message" maxlength="100"></label>
     <br>
-<label>Sender &nbsp; &nbsp;<input type="text" name="sender"></label>
+<label>Sender &nbsp; &nbsp;<input type="text" name="sender" maxlength="10"></label>
     <br>
-    <label>URL &nbsp; &nbsp;<input type="text" name="url"></label>
+    <label>URL &nbsp; &nbsp;<input type="text" name="url" maxlength="20"></label>
     <br>
     <input type="submit" value="SEND">
     <br>
