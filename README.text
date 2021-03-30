@@ -44,3 +44,22 @@ Here's the XML format:
 
 Special notes: MongoDB is used as backend database. Also without mongo, the implementation is there in the commit in the git.
 As an IDE, Pycharm is used.
+
+Steps Testing Using Robot Framework:
+
+1. go to root directory of the messageboard codebase i.e; C:/Users/bsens/fsecure
+2. run robot test/*.robot
+3. It will display the following output:
+
+==============================================================================
+Test :: This is a test suite with Robot Framework for message board
+==============================================================================
+[Teardown].                                                           | PASS |
+------------------------------------------------------------------------------
+Test :: This is a test suite with Robot Framework for message board   | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\bsens\fsecure\output.xml
+Log:     C:\Users\bsens\fsecure\log.html
+Report:  C:\Users\bsens\fsecure\report.html
+
