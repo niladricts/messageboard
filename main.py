@@ -52,7 +52,7 @@ def index():
     return render_template('create.html')
 
 
-@msgapp.route('/create', methods=['POST'])
+@msgapp.route('/create', methods=['GET', 'POST'])
 def create_message():
     """
     function to send message
