@@ -29,6 +29,4 @@ steps:
      archiveFile: '$(Build.SourcesDirectory)/Application$(Build.BuildId).zip'
      replaceExistingArchive: true
      
-  - publish: $(Build.SourcesDirectory)/Application$(Build.BuildId).zip
-     displayName:'Upload package'
-     artifact:drop
+ 
