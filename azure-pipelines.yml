@@ -26,9 +26,9 @@ steps:
      rootFolderOrFile: '$(Build.SourcesDirectory)'
      includeRootFolder: false
      archiveType: 'zip'
-     archiveFile: '$(System.DefaultWorkingDirectory)/Application$(Build.BuildId).zip'
+     archiveFile: '$(Build.SourcesDirectory)/Application$(Build.BuildId).zip'
      replaceExistingArchive: true
      
-  - publish: $(System.DefaultWorkingDirectory)/Application$(Build.BuildId).zip
+  - publish: $(Build.SourcesDirectory)/Application$(Build.BuildId).zip
      displayName:'Upload package'
      artifact:drop
