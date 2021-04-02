@@ -11,8 +11,7 @@ pool:
 
 steps:
   - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '$(pythonVersion)'
+    
       
   - script: |
          python -m venv antenv
